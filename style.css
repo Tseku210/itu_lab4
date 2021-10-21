@@ -5,7 +5,7 @@ body {
 }
 
 #container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     margin: 0;
     display: flex;
@@ -56,7 +56,6 @@ body {
 }
 #main {
     display: flex;
-    min-height: 70%;
     height: fit-content;
     width: 100%;
 }
@@ -64,6 +63,7 @@ body {
     width: 70%;
     background-color: white;
     padding: 20px 40px;
+    height: fit-content;
 }
 #content iframe {
     width: 100%;
@@ -236,8 +236,12 @@ body {
     #main {
         height: fit-content;
     }
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
     #content iframe {
-        height: 40%;
+        min-height: 40%;
     }
     #container {
         height: 100vh;
@@ -247,5 +251,13 @@ body {
 @media only screen and (min-width: 900px) and (max-width: 1024px){
     #content iframe {
         height: 60%;
+    }
+}
+@media only screen and (min-width: 1360px){
+    #container {
+        height: 100vh;
+    }
+    #content {
+        height: auto;
     }
 }
